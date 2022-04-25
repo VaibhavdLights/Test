@@ -2,9 +2,10 @@ from http import client
 import discord
 from discord.ext import commands
 from discord.ui import View, Button
-from dotenv import load_dotenv
+import dotenv
+import os
 
-load_dotenv()
+dotenv.load_dotenv()
 intents = discord.Intents.default()  # All but the THREE privileged ones
 intents.message_content = True  # Subscribe to the Message Content intent
 intents.members = True
@@ -47,4 +48,4 @@ async def rolecheck(ctx, role: discord.Role):
 #         await ctx.send("Nobody has the role {}".format(role.mention))
 
 
-bot.run('OTYwNTQ5NTUyNzkwODU5ODE2.YksDew.gckPpY1Ye4V2bjjE-NuVqS3zZ6A')
+bot.run(os.getenv('TOKEN'))

@@ -1,1 +1,0 @@
-nt(role_name)
